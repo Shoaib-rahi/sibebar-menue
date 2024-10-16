@@ -1,0 +1,224 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    color: #fff;
+    background-color: rgb(170, 226, 214);
+}
+.sidebar{
+    width: 300px;
+    height: 100vh;
+    background-color: #11101d;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 20px;
+    transition: all .5s ease;
+}
+.sidebar .logo-content .logo{
+color: #fff;
+width: 100%;
+height: 50px;
+display: flex;
+line-height: 50px;
+align-items: center;
+}
+
+.sidebar .logo-content .logo i{
+font-size: 35px;
+}
+.sidebar .logo-content .logo .logo_name{
+    font-size: 25px;
+    font-weight: 400;
+    margin-left: 10px;
+}
+.sidebar .container .icon{
+    position: absolute;
+    display: grid;
+    place-items: center;
+    top: 15px;
+    left: 90%;
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    transform: translateX(-20px);
+    cursor: pointer;
+    transition: all .4s ease;
+    margin-right: 20px;
+    border-radius: 10px;
+
+}
+.sidebar .container .icon:hover{
+    background: rgba(88, 87, 87, 0.527);
+}
+.sidebar .container ul{
+    list-style: none;
+    margin-top:30px;
+    position: relative;
+}
+.sidebar .container ul li{
+width: 100%;
+height: 40px;
+position: relative;
+line-height: 40px;
+display: flex;
+border-radius: 10px;
+padding: 0px 1rem;
+transition: all .4s ease;
+cursor: pointer;
+margin-top: 15px;
+color: white;
+}
+   
+ ul li:hover{
+    background-color: #30302dd8;
+    color: black !important;
+}
+
+
+.sidebar .container ul li a{
+    text-decoration: none;
+}
+.sidebar .container ul li a i{
+  font-size: 25px;
+  color: white;
+}
+.sidebar .container ul li a span{
+    margin-left: 15px;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+}
+
+.sidebar ul li input{
+    width: 100%;
+    height: 100%;
+    line-height: 50px;
+    color: white;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    background: rgba(80, 79, 79, 0.726);
+    padding-left: 3rem;
+    border-radius: 5px;
+}
+.sidebar ul li .fa-magnifying-glass{
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    font-size: 1.5rem;
+    color: white;
+}
+.sidebar .profile-data{
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+}
+.sidebar .profile-data .profile-img img {
+     border-radius: 5px;
+    width: 40px;
+}
+.profile-data .profile{
+    margin-left: 10px;
+}
+.profile-data .profile .profile-name{
+    font-size: 20px;
+    font-weight: 900;
+}
+.profile .profile-job{
+    font-size: 16px;
+    font-weight: 400;
+}
+.profile-data i{
+   font-size: 20px;
+   font-weight: bold;
+   position: absolute;
+   right: 40px;
+   width: 20px;
+   height: 20px;
+   line-height: 20px;
+   top: 10px;
+   cursor: pointer;
+}
+.sidebar ul li .tooltip{
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    color: black;
+    background-color:#fff;
+    right: -140px;
+    top: 0;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    opacity: 0;
+    pointer-events: none;
+    font-size: 1.3rem;
+    font-weight: bolder;
+
+}
+.sidebar ul li:hover .tooltip{
+opacity: 1;
+}
+.sidebar.active{
+    width: 100px;
+}
+.sidebar.active ul li {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   transition: all .5s ease;
+    transform: translateX(-15%);
+    z-index: 99;
+}
+.sidebar.active ul li:hover{
+    background-color: rgba(59, 57, 57, 0.671);
+}
+.sidebar.active ul{
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.sidebar.active ul li .tooltip{
+   margin-left: 20px;
+}
+.sidebar.active ul li .span{
+  display: none;
+}
+.sidebar.active .icon{
+position: absolute;
+left: 50px;
+font-size: 2rem;
+}
+.sidebar.active .logo-content{
+    display: none;
+}
+.sidebar.active .profile-img{
+    display: none;
+}
+.sidebar.active .profile-data{
+    display: none;
+}
+.sidebar.active ul li input{
+    display: none;
+    display: grid;
+    background: transparent;
+    place-items: center;
+}
+.sidebar.active .search{
+    position: absolute;
+    left: 10px;
+}
